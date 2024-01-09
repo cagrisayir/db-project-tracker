@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		065739EE2B4D7B2800E09AD8 /* db_project_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739ED2B4D7B2800E09AD8 /* db_project_trackerApp.swift */; };
-		065739F02B4D7B2800E09AD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739EF2B4D7B2800E09AD8 /* ContentView.swift */; };
+		065739EE2B4D7B2800E09AD8 /* DBProjectTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */; };
+		065739F02B4D7B2800E09AD8 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */; };
 		065739F22B4D7B3200E09AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065739F12B4D7B3200E09AD8 /* Assets.xcassets */; };
 		065739F52B4D7B3200E09AD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065739F42B4D7B3200E09AD8 /* Preview Assets.xcassets */; };
+		065739FD2B4D7B9C00E09AD8 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739FC2B4D7B9C00E09AD8 /* Project.swift */; };
+		065739FF2B4D7C0000E09AD8 /* ProjectUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739FE2B4D7C0000E09AD8 /* ProjectUpdate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		065739EA2B4D7B2800E09AD8 /* db-project-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "db-project-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		065739ED2B4D7B2800E09AD8 /* db_project_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = db_project_trackerApp.swift; sourceTree = "<group>"; };
-		065739EF2B4D7B2800E09AD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProjectTracker.swift; sourceTree = "<group>"; };
+		065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		065739F12B4D7B3200E09AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		065739F42B4D7B3200E09AD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		065739FC2B4D7B9C00E09AD8 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		065739FE2B4D7C0000E09AD8 /* ProjectUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,9 @@
 		065739EC2B4D7B2800E09AD8 /* db-project-tracker */ = {
 			isa = PBXGroup;
 			children = (
-				065739ED2B4D7B2800E09AD8 /* db_project_trackerApp.swift */,
-				065739EF2B4D7B2800E09AD8 /* ContentView.swift */,
+				065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */,
+				065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */,
+				065739FB2B4D7B8600E09AD8 /* Models */,
 				065739F12B4D7B3200E09AD8 /* Assets.xcassets */,
 				065739F32B4D7B3200E09AD8 /* Preview Content */,
 			);
@@ -65,6 +70,15 @@
 				065739F42B4D7B3200E09AD8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		065739FB2B4D7B8600E09AD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				065739FC2B4D7B9C00E09AD8 /* Project.swift */,
+				065739FE2B4D7C0000E09AD8 /* ProjectUpdate.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				065739F02B4D7B2800E09AD8 /* ContentView.swift in Sources */,
-				065739EE2B4D7B2800E09AD8 /* db_project_trackerApp.swift in Sources */,
+				065739FF2B4D7C0000E09AD8 /* ProjectUpdate.swift in Sources */,
+				065739F02B4D7B2800E09AD8 /* ProjectListView.swift in Sources */,
+				065739EE2B4D7B2800E09AD8 /* DBProjectTracker.swift in Sources */,
+				065739FD2B4D7B9C00E09AD8 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
