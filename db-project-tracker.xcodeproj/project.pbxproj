@@ -15,6 +15,7 @@
 		065739FF2B4D7C0000E09AD8 /* ProjectUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739FE2B4D7C0000E09AD8 /* ProjectUpdate.swift */; };
 		06573A022B4D7E8A00E09AD8 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06573A012B4D7E8A00E09AD8 /* FontHelper.swift */; };
 		06573A042B50094B00E09AD8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06573A032B50094B00E09AD8 /* Launch Screen.storyboard */; };
+		06573A082B5013E300E09AD8 /* StatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06573A072B5013E300E09AD8 /* StatBubbleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		065739FE2B4D7C0000E09AD8 /* ProjectUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdate.swift; sourceTree = "<group>"; };
 		06573A012B4D7E8A00E09AD8 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		06573A032B50094B00E09AD8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		06573A072B5013E300E09AD8 /* StatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBubbleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		065739EC2B4D7B2800E09AD8 /* db-project-tracker */ = {
 			isa = PBXGroup;
 			children = (
+				06573A062B5013BE00E09AD8 /* ProjectList */,
 				06573A002B4D7E6E00E09AD8 /* Helpers */,
 				065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */,
 				065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */,
@@ -93,6 +96,14 @@
 				06573A012B4D7E8A00E09AD8 /* FontHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		06573A062B5013BE00E09AD8 /* ProjectList */ = {
+			isa = PBXGroup;
+			children = (
+				06573A072B5013E300E09AD8 /* StatBubbleView.swift */,
+			);
+			path = ProjectList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 				06573A022B4D7E8A00E09AD8 /* FontHelper.swift in Sources */,
 				065739F02B4D7B2800E09AD8 /* ProjectListView.swift in Sources */,
 				065739EE2B4D7B2800E09AD8 /* DBProjectTracker.swift in Sources */,
+				06573A082B5013E300E09AD8 /* StatBubbleView.swift in Sources */,
 				065739FD2B4D7B9C00E09AD8 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

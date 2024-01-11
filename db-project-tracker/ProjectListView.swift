@@ -15,14 +15,43 @@ struct ProjectListView: View {
 
             VStack(alignment: .leading) {
                 Text("Projects")
-                    .font(Font.screenHeading)
+                    .font(.screenHeading)
                     .foregroundStyle(.white)
 
                 ScrollView {
+                    VStack(alignment: .leading) {
+                        ZStack(alignment: .leading) {
+                            RoundedRectangle(cornerRadius: 15)
+                                .opacity(0.7)
+                                .shadow(radius: 5, x: 0, y: 4)
+
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text("Code With Omer")
+                                    .font(.bigHeadline)
+                                    .foregroundStyle(.white)
+
+                                HStack(alignment: .center) {
+                                    StatBubbleView()
+                                    StatBubbleView(title: "Sessions", stat: "34")
+                                    StatBubbleView()
+                                    StatBubbleView()
+                                }
+
+                                Text("My current focus is...")
+                                    .font(.featuredText)
+                                    .foregroundStyle(Color.gray)
+
+                                Text("Design the new website")
+                                    .font(.featuredText)
+                                    .foregroundStyle(Color.gray)
+                                    .bold()
+                            }
+                            .padding()
+                        }
+                    }
                 }
 
                 Button(action: {
-                    // Todo
                 }, label: {
                     Image("cross")
                         .padding(10)
