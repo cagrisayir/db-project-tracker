@@ -30,11 +30,13 @@ struct ProjectListView: View {
                                     .font(.bigHeadline)
                                     .foregroundStyle(.white)
 
-                                HStack(alignment: .center) {
-                                    StatBubbleView()
-                                    StatBubbleView(title: "Sessions", stat: "34")
-                                    StatBubbleView()
-                                    StatBubbleView()
+                                HStack(alignment: .center, spacing: 13) {
+                                    Spacer()
+                                    StatBubbleView(title: "Hours", stat: "290")
+                                    StatBubbleView(title: "Sessions", stat: "34", startColor: Color("Green"), endColor: Color("Lime"))
+                                    StatBubbleView(title: "Updates", stat: "32", startColor: Color("Maroon"), endColor: Color("Purple"))
+                                    StatBubbleView(title: "Wins", stat: "9", startColor: Color("Maroon"), endColor: Color("Olive"))
+                                    Spacer()
                                 }
 
                                 Text("My current focus is...")
