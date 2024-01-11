@@ -25,6 +25,12 @@ struct ProjectListView: View {
                     // Todo
                 }, label: {
                     Image("cross")
+                        .padding(10)
+                        .background(Color.black)
+                        .clipShape(
+                            Circle()
+                        )
+
                 })
             }.padding()
         }
