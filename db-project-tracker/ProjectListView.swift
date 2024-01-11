@@ -14,27 +14,30 @@ struct ProjectListView: View {
                 .ignoresSafeArea()
 
             VStack(alignment: .leading) {
-                Text("Projects")
-                    .font(.screenHeading)
-                    .foregroundStyle(.white)
+                HStack {
+                    Text("Projects")
+                        .font(.screenHeading)
+                        .foregroundStyle(.white)
+                    Spacer()
+                    Button(action: {
+                    }, label: {
+                        Image("cross")
+                            .padding(10)
+                            .background(Color.black)
+                            .clipShape(
+                                Circle()
+                            )
 
-                ScrollView {
+                    })
+                }
+
+                ScrollView(showsIndicators: false) {
                     VStack(alignment: .leading, spacing: 26) {
                         ProjectCardView()
                         ProjectCardView()
                     }
                 }
 
-                Button(action: {
-                }, label: {
-                    Image("cross")
-                        .padding(10)
-                        .background(Color.black)
-                        .clipShape(
-                            Circle()
-                        )
-
-                })
             }.padding()
         }
     }
