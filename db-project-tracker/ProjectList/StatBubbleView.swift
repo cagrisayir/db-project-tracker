@@ -11,7 +11,7 @@ struct StatBubbleView: View {
     var title: String = "Hours"
     var stat: String = "290"
     var startColor = Color("Navy")
-    var endColor = Color("Blue")
+    var endColor = Color("Sky Blue")
 
     var body: some View {
         ZStack {
