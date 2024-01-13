@@ -17,6 +17,11 @@ struct ProjectDetailView: View {
             LinearGradient(colors: [Color("Navy"), Color("Sky Blue")], startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
 
+            // LINE
+            LinearGradient(colors: [Color("Sky Blue"), Color("Washed Blue").opacity(0)], startPoint: .bottom, endPoint: .top)
+                .frame(width: 2)
+                .padding(.leading, -150)
+
             VStack {
                 VStack(alignment: .leading, spacing: 13) {
                     Text(project.name)
@@ -32,44 +37,67 @@ struct ProjectDetailView: View {
                     }
                     Text("My current focus is...")
                         .font(.featuredText)
-                    Text("Design the new website")
-                        .font(.featuredText)
-                    Button("Back") {
-                        // Navigate back
-                        dismiss()
+                    HStack {
+                        Image(systemName: "checkmark.square")
+                        Text("Design the new website")
+                            .font(.featuredText)
                     }
+                    .padding(.leading)
                 }.foregroundStyle(.white)
                     .padding()
                     .background {
                         Color.black
                             .opacity(0.7)
                             .clipShape(.rect(bottomLeadingRadius: 15, bottomTrailingRadius: 15))
+                            .ignoresSafeArea()
                     }
-                ScrollView {
-                    VStack {
-//                        ForEach(project.updates) { update in
-//
-//                        }
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 27) {
+                        ProjectUpdateView()
+                        ProjectUpdateView()
+                        ProjectUpdateView()
+                        ProjectUpdateView()
+                        ProjectUpdateView()
+                        ProjectUpdateView()
+                    }
+                    .padding()
+                    .padding(.bottom, 100)
+                }
+            }
 
+            VStack {
+                Spacer()
+
+                HStack {
+                    Button(action: {
+                        // TODO: add project update
+                    }, label: {
                         ZStack {
-                            Rectangle()
+                            Circle()
                                 .foregroundStyle(.black)
-                            VStack {
-                                HStack {
-                                    Text("Thursday, September 12, 2024")
-                                    Spacer()
-                                    Text("9 Hours")
-                                }
-                                .background {
-                                    Color("Orchid")
-                                }
-                                Text("Project headline")
-                                    .font(.smallHeadline)
-                                Text("Project summary")
-                            }
+                                .frame(width: 65)
+                            Image("cross")
                         }
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                    }
+                    })
+                    Spacer()
+                    Button(action: {
+                        dismiss()
+                    }, label: {
+                        ZStack {
+                            Circle()
+                                .foregroundStyle(.black)
+                                .frame(width: 65)
+                            Image(systemName: "arrowshape.backward.fill")
+                                .foregroundStyle(Color("Orchid"))
+                        }
+                    })
+                }
+                .padding()
+                .background {
+                    Color.black
+                        .opacity(0.5)
+                        .clipShape(.rect(topLeadingRadius: 15, topTrailingRadius: 15))
+                        .ignoresSafeArea()
                 }
             }
         }.navigationBarBackButtonHidden(true)

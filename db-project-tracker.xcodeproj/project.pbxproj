@@ -19,6 +19,7 @@
 		06573A0A2B50168500E09AD8 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06573A092B50168500E09AD8 /* ProjectCardView.swift */; };
 		067ACAA32B5151B700C29A5F /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067ACAA22B5151B700C29A5F /* AddProjectView.swift */; };
 		067ACAA62B51594600C29A5F /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067ACAA52B51594600C29A5F /* ProjectDetailView.swift */; };
+		068B82612B52B597000530EE /* ProjectUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B82602B52B597000530EE /* ProjectUpdateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		06573A092B50168500E09AD8 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		067ACAA22B5151B700C29A5F /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		067ACAA52B51594600C29A5F /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		068B82602B52B597000530EE /* ProjectUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				067ACAA52B51594600C29A5F /* ProjectDetailView.swift */,
+				068B82602B52B597000530EE /* ProjectUpdateView.swift */,
 			);
 			path = ProjectDetail;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				065739F02B4D7B2800E09AD8 /* ProjectListView.swift in Sources */,
 				065739EE2B4D7B2800E09AD8 /* DBProjectTracker.swift in Sources */,
 				06573A082B5013E300E09AD8 /* StatBubbleView.swift in Sources */,
+				068B82612B52B597000530EE /* ProjectUpdateView.swift in Sources */,
 				06573A0A2B50168500E09AD8 /* ProjectCardView.swift in Sources */,
 				065739FD2B4D7B9C00E09AD8 /* Project.swift in Sources */,
 			);
