@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061528D22B558BA700833EA1 /* AddUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061528D12B558BA700833EA1 /* AddUpdateView.swift */; };
 		065739EE2B4D7B2800E09AD8 /* DBProjectTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */; };
 		065739F02B4D7B2800E09AD8 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */; };
 		065739F22B4D7B3200E09AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065739F12B4D7B3200E09AD8 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061528D12B558BA700833EA1 /* AddUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateView.swift; sourceTree = "<group>"; };
 		065739EA2B4D7B2800E09AD8 /* db-project-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "db-project-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProjectTracker.swift; sourceTree = "<group>"; };
 		065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				067ACAA52B51594600C29A5F /* ProjectDetailView.swift */,
 				068B82602B52B597000530EE /* ProjectUpdateView.swift */,
+				061528D12B558BA700833EA1 /* AddUpdateView.swift */,
 			);
 			path = ProjectDetail;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				068B82612B52B597000530EE /* ProjectUpdateView.swift in Sources */,
 				06573A0A2B50168500E09AD8 /* ProjectCardView.swift in Sources */,
 				065739FD2B4D7B9C00E09AD8 /* Project.swift in Sources */,
+				061528D22B558BA700833EA1 /* AddUpdateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

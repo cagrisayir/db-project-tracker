@@ -8,11 +8,46 @@
 import SwiftUI
 
 struct AddUpdateView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
 
-#Preview {
-    AddUpdateView()
+    var project: Project
+    @State var headline = ""
+    @State var summary = ""
+    @State var hours = ""
+
+    var body: some View {
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+
+            VStack(alignment: .leading) {
+                Text("New Update")
+                    .font(.bigHeadline)
+                    .foregroundStyle(.white)
+
+                TextField("Headline", text: $headline)
+                    .textFieldStyle(.roundedBorder)
+
+                TextField("Summary", text: $summary)
+                    .textFieldStyle(.roundedBorder)
+
+                HStack {
+                    TextField("Hours", text: $hours)
+                        .textFieldStyle(.roundedBorder)
+
+                    Button("Save") {
+                        // TODO: Save project to SwiftData
+                        dismiss()
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.blue)
+                }
+
+                Spacer()
+            }
+            .padding(.horizontal)
+            .padding(.top)
+        }
+    }
 }
