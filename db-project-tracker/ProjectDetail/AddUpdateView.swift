@@ -12,6 +12,7 @@ struct AddUpdateView: View {
     @Environment(\.modelContext) private var modelContext
 
     var project: Project
+    var update: ProjectUpdate
     @State var headline = ""
     @State var summary = ""
     @State var hours = ""
@@ -29,15 +30,23 @@ struct AddUpdateView: View {
                 TextField("Headline", text: $headline)
                     .textFieldStyle(.roundedBorder)
 
-                TextField("Summary", text: $summary)
+                TextField("Summary", text: $summary, axis: .vertical)
                     .textFieldStyle(.roundedBorder)
 
                 HStack {
                     TextField("Hours", text: $hours)
                         .textFieldStyle(.roundedBorder)
+                        .keyboardType(.numberPad)
+                        .frame(width: 60)
 
                     Button("Save") {
-                        // TODO: Save project to SwiftData
+                        // Save project to SwiftData
+                        update.headline = headline
+                        update.project = project
+                        update.summary = summary
+                        update.hours = Double(hours)!
+                        project.updates.append(update)
+
                         dismiss()
                     }
                     .buttonStyle(.borderedProminent)
