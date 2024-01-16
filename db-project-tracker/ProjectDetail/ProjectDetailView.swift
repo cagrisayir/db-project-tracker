@@ -66,7 +66,9 @@ struct ProjectDetailView: View {
                     }
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 27) {
-                        ForEach(project.updates) { update in
+                        ForEach(project.updates.sorted(by: { u1, u2 in
+                            u1.date > u2.date
+                        })) { update in
                             ProjectUpdateView(update: update)
                         }
                     }
@@ -128,8 +130,7 @@ struct ProjectDetailView: View {
         update.updateType = .milestone
         update.headline = "Milestone Achieved"
         update.summary = project.focus
-        project.updates.append(update)
-
+        project.updates.insert(update, at: 0)
         // clear the project focus
         project.focus = ""
     }

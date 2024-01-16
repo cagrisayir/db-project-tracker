@@ -45,7 +45,7 @@ struct AddUpdateView: View {
                         update.project = project
                         update.summary = summary
                         update.hours = Double(hours)!
-                        project.updates.append(update)
+                        project.updates.insert(update, at: 0)
 
                         dismiss()
                     }
