@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		061528D22B558BA700833EA1 /* AddUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061528D12B558BA700833EA1 /* AddUpdateView.swift */; };
 		061528D42B55961700833EA1 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061528D32B55961700833EA1 /* DateHelper.swift */; };
+		0621BC2E2B56DE80006FF7DB /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0621BC2D2B56DE80006FF7DB /* EditFocusView.swift */; };
 		065739EE2B4D7B2800E09AD8 /* DBProjectTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */; };
 		065739F02B4D7B2800E09AD8 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */; };
 		065739F22B4D7B3200E09AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065739F12B4D7B3200E09AD8 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		061528D12B558BA700833EA1 /* AddUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateView.swift; sourceTree = "<group>"; };
 		061528D32B55961700833EA1 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		0621BC2D2B56DE80006FF7DB /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
 		065739EA2B4D7B2800E09AD8 /* db-project-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "db-project-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProjectTracker.swift; sourceTree = "<group>"; };
 		065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				067ACAA52B51594600C29A5F /* ProjectDetailView.swift */,
 				068B82602B52B597000530EE /* ProjectUpdateView.swift */,
 				061528D12B558BA700833EA1 /* AddUpdateView.swift */,
+				0621BC2D2B56DE80006FF7DB /* EditFocusView.swift */,
 			);
 			path = ProjectDetail;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				065739FF2B4D7C0000E09AD8 /* ProjectUpdate.swift in Sources */,
 				06573A022B4D7E8A00E09AD8 /* FontHelper.swift in Sources */,
+				0621BC2E2B56DE80006FF7DB /* EditFocusView.swift in Sources */,
 				067ACAA62B51594600C29A5F /* ProjectDetailView.swift in Sources */,
 				067ACAA32B5151B700C29A5F /* AddProjectView.swift in Sources */,
 				065739F02B4D7B2800E09AD8 /* ProjectListView.swift in Sources */,
