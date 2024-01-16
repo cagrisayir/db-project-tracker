@@ -30,14 +30,16 @@ struct ProjectCardView: View {
                     Spacer()
                 }
 
-                Text("My current focus is...")
-                    .font(.featuredText)
-                    .foregroundStyle(Color.gray)
+                if project.focus.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+                    Text("My current focus is...")
+                        .font(.featuredText)
+                        .foregroundStyle(Color.gray)
 
-                Text("Design the new website")
-                    .font(.featuredText)
-                    .foregroundStyle(Color.gray)
-                    .bold()
+                    Text(project.focus)
+                        .font(.featuredText)
+                        .foregroundStyle(Color.gray)
+                        .bold()
+                }
             }
             .padding()
         }

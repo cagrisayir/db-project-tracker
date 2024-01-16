@@ -40,7 +40,14 @@ struct ProjectDetailView: View {
                     Text("My current focus is...")
                         .font(.featuredText)
                     HStack {
-                        Image(systemName: "checkmark.square")
+                        if project.focus.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+                            Button(action: {
+                                // Complete this milestone
+                                completeMilestone()
+                            }, label: {
+                                Image(systemName: "checkmark.square")
+                            })
+                        }
                         Text(project.focus.trimmingCharacters(in: .whitespacesAndNewlines) == "" ? "Tap to set your focus" : project.focus)
                             .font(.featuredText)
                             .onTapGesture {
@@ -113,5 +120,17 @@ struct ProjectDetailView: View {
                 EditFocusView(project: project)
                     .presentationDetents([.fraction(0.2)])
             })
+    }
+
+    func completeMilestone() {
+        // Create a new project update for milestone
+        let update = ProjectUpdate()
+        update.updateType = .milestone
+        update.headline = "Milestone Achieved"
+        update.summary = project.focus
+        project.updates.append(update)
+
+        // clear the project focus
+        project.focus = ""
     }
 }
