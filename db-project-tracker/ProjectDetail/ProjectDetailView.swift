@@ -12,6 +12,7 @@ struct ProjectDetailView: View {
 
     var project: Project
     @State private var update: ProjectUpdate?
+    @State private var showEditFocus = false
 
     var body: some View {
         ZStack {
@@ -40,8 +41,12 @@ struct ProjectDetailView: View {
                         .font(.featuredText)
                     HStack {
                         Image(systemName: "checkmark.square")
-                        Text("Design the new website")
+                        Text(project.focus.trimmingCharacters(in: .whitespacesAndNewlines) == "" ? "Tap to set your focus" : project.focus)
                             .font(.featuredText)
+                            .onTapGesture {
+                                // Display the edit focus form
+                                showEditFocus.toggle()
+                            }
                     }
                     .padding(.leading)
                 }.foregroundStyle(.white)
@@ -104,5 +109,9 @@ struct ProjectDetailView: View {
                 AddUpdateView(project: project, update: update)
                     .presentationDetents([.fraction(0.5)])
             }
+            .sheet(isPresented: $showEditFocus, content: {
+                EditFocusView(project: project)
+                    .presentationDetents([.fraction(0.2)])
+            })
     }
 }
