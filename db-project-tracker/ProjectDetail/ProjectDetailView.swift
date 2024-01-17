@@ -5,10 +5,12 @@
 //  Created by Omer Cagri Sayir on 12.01.2024.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ProjectDetailView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
 
     var project: Project
     @State private var newUpdate: ProjectUpdate?
@@ -32,9 +34,9 @@ struct ProjectDetailView: View {
                     HStack(alignment: .center, spacing: 13) {
                         Spacer()
                         StatBubbleView(title: "Hours", stat: String(Int(project.hours)))
-                        StatBubbleView(title: "Sessions", stat: "34", startColor: Color("Turtle Green"), endColor: Color("Lime"))
-                        StatBubbleView(title: "Updates", stat: "32", startColor: Color("Maroon"), endColor: Color("Fuschia"))
-                        StatBubbleView(title: "Wins", stat: "9", startColor: Color("Maroon"), endColor: Color("Olive"))
+                        StatBubbleView(title: "Sessions", stat: String(project.sessions), startColor: Color("Turtle Green"), endColor: Color("Lime"))
+                        StatBubbleView(title: "Updates", stat: String(project.updates.count), startColor: Color("Maroon"), endColor: Color("Fuschia"))
+                        StatBubbleView(title: "Wins", stat: String(project.wins), startColor: Color("Maroon"), endColor: Color("Olive"))
                         Spacer()
                     }
                     Text("My current focus is...")
@@ -137,6 +139,12 @@ struct ProjectDetailView: View {
         update.headline = "Milestone Achieved"
         update.summary = project.focus
         project.updates.insert(update, at: 0)
+
+        try? modelContext.save()
+
+        // update the stats
+        StatHelper.updateAdded(for: project, update: update)
+
         // clear the project focus
         project.focus = ""
     }
