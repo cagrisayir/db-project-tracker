@@ -54,7 +54,7 @@ struct ProjectListView: View {
             }.padding()
         }
         .sheet(item: $newProject) { project in
-            AddProjectView(project: project)
+            EditProjectView(isEditMode: false, project: project)
                 .presentationDetents([.fraction(0.3)])
         }
     }

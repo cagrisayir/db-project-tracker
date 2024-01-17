@@ -20,7 +20,7 @@
 		06573A042B50094B00E09AD8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06573A032B50094B00E09AD8 /* Launch Screen.storyboard */; };
 		06573A082B5013E300E09AD8 /* StatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06573A072B5013E300E09AD8 /* StatBubbleView.swift */; };
 		06573A0A2B50168500E09AD8 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06573A092B50168500E09AD8 /* ProjectCardView.swift */; };
-		067ACAA32B5151B700C29A5F /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067ACAA22B5151B700C29A5F /* AddProjectView.swift */; };
+		067ACAA32B5151B700C29A5F /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067ACAA22B5151B700C29A5F /* EditProjectView.swift */; };
 		067ACAA62B51594600C29A5F /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067ACAA52B51594600C29A5F /* ProjectDetailView.swift */; };
 		068B82612B52B597000530EE /* ProjectUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B82602B52B597000530EE /* ProjectUpdateView.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +40,7 @@
 		06573A032B50094B00E09AD8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		06573A072B5013E300E09AD8 /* StatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBubbleView.swift; sourceTree = "<group>"; };
 		06573A092B50168500E09AD8 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
-		067ACAA22B5151B700C29A5F /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
+		067ACAA22B5151B700C29A5F /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		067ACAA52B51594600C29A5F /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		068B82602B52B597000530EE /* ProjectUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,7 +119,7 @@
 			children = (
 				06573A072B5013E300E09AD8 /* StatBubbleView.swift */,
 				06573A092B50168500E09AD8 /* ProjectCardView.swift */,
-				067ACAA22B5151B700C29A5F /* AddProjectView.swift */,
+				067ACAA22B5151B700C29A5F /* EditProjectView.swift */,
 			);
 			path = ProjectList;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 				06573A022B4D7E8A00E09AD8 /* FontHelper.swift in Sources */,
 				0621BC2E2B56DE80006FF7DB /* EditFocusView.swift in Sources */,
 				067ACAA62B51594600C29A5F /* ProjectDetailView.swift in Sources */,
-				067ACAA32B5151B700C29A5F /* AddProjectView.swift in Sources */,
+				067ACAA32B5151B700C29A5F /* EditProjectView.swift in Sources */,
 				065739F02B4D7B2800E09AD8 /* ProjectListView.swift in Sources */,
 				065739EE2B4D7B2800E09AD8 /* DBProjectTracker.swift in Sources */,
 				06573A082B5013E300E09AD8 /* StatBubbleView.swift in Sources */,
