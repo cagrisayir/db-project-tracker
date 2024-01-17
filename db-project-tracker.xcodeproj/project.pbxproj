@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		061528D22B558BA700833EA1 /* AddUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061528D12B558BA700833EA1 /* AddUpdateView.swift */; };
+		061528D22B558BA700833EA1 /* EditUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061528D12B558BA700833EA1 /* EditUpdateView.swift */; };
 		061528D42B55961700833EA1 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061528D32B55961700833EA1 /* DateHelper.swift */; };
 		0621BC2E2B56DE80006FF7DB /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0621BC2D2B56DE80006FF7DB /* EditFocusView.swift */; };
 		065739EE2B4D7B2800E09AD8 /* DBProjectTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */; };
@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		061528D12B558BA700833EA1 /* AddUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateView.swift; sourceTree = "<group>"; };
+		061528D12B558BA700833EA1 /* EditUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUpdateView.swift; sourceTree = "<group>"; };
 		061528D32B55961700833EA1 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		0621BC2D2B56DE80006FF7DB /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
 		065739EA2B4D7B2800E09AD8 /* db-project-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "db-project-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +129,7 @@
 			children = (
 				067ACAA52B51594600C29A5F /* ProjectDetailView.swift */,
 				068B82602B52B597000530EE /* ProjectUpdateView.swift */,
-				061528D12B558BA700833EA1 /* AddUpdateView.swift */,
+				061528D12B558BA700833EA1 /* EditUpdateView.swift */,
 				0621BC2D2B56DE80006FF7DB /* EditFocusView.swift */,
 			);
 			path = ProjectDetail;
@@ -218,7 +218,7 @@
 				06573A0A2B50168500E09AD8 /* ProjectCardView.swift in Sources */,
 				061528D42B55961700833EA1 /* DateHelper.swift in Sources */,
 				065739FD2B4D7B9C00E09AD8 /* Project.swift in Sources */,
-				061528D22B558BA700833EA1 /* AddUpdateView.swift in Sources */,
+				061528D22B558BA700833EA1 /* EditUpdateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

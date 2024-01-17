@@ -11,7 +11,7 @@ struct ProjectDetailView: View {
     @Environment(\.dismiss) private var dismiss
 
     var project: Project
-    @State private var update: ProjectUpdate?
+    @State private var newUpdate: ProjectUpdate?
     @State private var showEditFocus = false
 
     var body: some View {
@@ -70,6 +70,11 @@ struct ProjectDetailView: View {
                             u1.date > u2.date
                         })) { update in
                             ProjectUpdateView(update: update)
+                                .onTapGesture {
+                                }
+                                .onLongPressGesture {
+                                    self.newUpdate = update
+                                }
                         }
                     }
                     .padding()
@@ -83,7 +88,7 @@ struct ProjectDetailView: View {
                 HStack {
                     Button(action: {
                         // Add project update
-                        self.update = ProjectUpdate()
+                        self.newUpdate = ProjectUpdate()
                     }, label: {
                         ZStack {
                             Circle()
@@ -114,8 +119,9 @@ struct ProjectDetailView: View {
                 }
             }
         }.navigationBarBackButtonHidden(true)
-            .sheet(item: $update) { update in
-                AddUpdateView(project: project, update: update)
+            .sheet(item: $newUpdate) { update in
+                let isEdit = update.headline.trimmingCharacters(in: .whitespacesAndNewlines) != ""
+                EditUpdateView(project: project, update: update, isEditMode: isEdit)
                     .presentationDetents([.fraction(0.5)])
             }
             .sheet(isPresented: $showEditFocus, content: {

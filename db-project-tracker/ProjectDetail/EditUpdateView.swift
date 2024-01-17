@@ -7,15 +7,18 @@
 
 import SwiftUI
 
-struct AddUpdateView: View {
+struct EditUpdateView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
 
     var project: Project
     var update: ProjectUpdate
-    @State var headline = ""
-    @State var summary = ""
-    @State var hours = ""
+    var isEditMode: Bool
+
+    @State private var headline = ""
+    @State private var summary = ""
+    @State private var hours = ""
+    @State private var showConfirmation = false
 
     var body: some View {
         ZStack {
@@ -23,7 +26,7 @@ struct AddUpdateView: View {
                 .ignoresSafeArea()
 
             VStack(alignment: .leading) {
-                Text("New Update")
+                Text(isEditMode ? "Edit Update" : "New Update")
                     .font(.bigHeadline)
                     .foregroundStyle(.white)
 
@@ -39,24 +42,47 @@ struct AddUpdateView: View {
                         .keyboardType(.numberPad)
                         .frame(width: 60)
 
-                    Button("Save") {
-                        // Save project to SwiftData
+                    Button(isEditMode ? "Save" : "Add") {
                         update.headline = headline
                         update.project = project
                         update.summary = summary
                         update.hours = Double(hours)!
-                        project.updates.insert(update, at: 0)
 
+                        if !isEditMode {
+                            // Add Project update
+                            project.updates.insert(update, at: 0)
+                        }
                         dismiss()
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.blue)
+
+                    if isEditMode {
+                        Button("Delete") {
+                            // Show confirmation dialog
+                            showConfirmation.toggle()
+                        }.buttonStyle(.borderedProminent)
+                            .tint(.red)
+                    }
                 }
 
                 Spacer()
             }
             .padding(.horizontal)
             .padding(.top)
+        }
+        .confirmationDialog("Are you sure to delete?", isPresented: $showConfirmation, titleVisibility: .visible) {
+            Button("Yes, delete it.") {
+                project.updates.removeAll { u in
+                    u.id == update.id
+                }
+                dismiss()
+            }
+        }
+        .onAppear {
+            headline = update.headline
+            summary = update.summary
+            hours = String(Int(update.hours))
         }
     }
 }
