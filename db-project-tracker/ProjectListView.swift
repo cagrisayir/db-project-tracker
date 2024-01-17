@@ -10,8 +10,8 @@ import SwiftUI
 
 struct ProjectListView: View {
     @State private var newProject: Project?
-
     @Query private var projects: [Project]
+    @State private var showProjectDetail = false
 
     var body: some View {
         ZStack {
@@ -41,15 +41,25 @@ struct ProjectListView: View {
                 ScrollView(showsIndicators: false) {
                     VStack(alignment: .leading, spacing: 26) {
                         ForEach(projects) { project in
-                            NavigationLink {
-                                ProjectDetailView(project: project)
-                            } label: {
-                                ProjectCardView(project: project)
-                                    .onLongPressGesture {
-                                        newProject = project
-                                    }
-                            }
-                            .buttonStyle(.plain)
+                            ProjectCardView(project: project)
+                                .onTapGesture {
+                                    showProjectDetail.toggle()
+                                }
+                                .onLongPressGesture {
+                                    newProject = project
+                                }
+                                .navigationDestination(isPresented: $showProjectDetail) {
+                                    ProjectDetailView(project: project)
+                                }
+//                            NavigationLink {
+//                                ProjectDetailView(project: project)
+//                            } label: {
+//                                ProjectCardView(project: project)
+//                                    .onLongPressGesture {
+//                                        newProject = project
+//                                    }
+//                            }
+//                            .buttonStyle(.plain)
                         }
                     }
                 }
