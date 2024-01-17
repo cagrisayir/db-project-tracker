@@ -12,8 +12,8 @@ struct EditProjectView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
 
-    var isEditMode: Bool
     var project: Project
+    var isEditMode: Bool
     @State private var projectName: String = ""
     @State private var showConfirmation = false
 
@@ -48,6 +48,7 @@ struct EditProjectView: View {
                     // Show delete button
                     Button("Delete", action: {
                         // Show confirmation dialog
+                        showConfirmation.toggle()
                     })
                     .buttonStyle(.borderedProminent)
                     .tint(.red)
@@ -63,6 +64,8 @@ struct EditProjectView: View {
                 context.delete(project)
                 dismiss()
             }
+        }.onAppear {
+            projectName = project.name
         }
     }
 }
