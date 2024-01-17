@@ -10,6 +10,7 @@
 		061528D22B558BA700833EA1 /* EditUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061528D12B558BA700833EA1 /* EditUpdateView.swift */; };
 		061528D42B55961700833EA1 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061528D32B55961700833EA1 /* DateHelper.swift */; };
 		0621BC2E2B56DE80006FF7DB /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0621BC2D2B56DE80006FF7DB /* EditFocusView.swift */; };
+		0621BC302B57C9BC006FF7DB /* StatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0621BC2F2B57C9BC006FF7DB /* StatHelper.swift */; };
 		065739EE2B4D7B2800E09AD8 /* DBProjectTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */; };
 		065739F02B4D7B2800E09AD8 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */; };
 		065739F22B4D7B3200E09AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065739F12B4D7B3200E09AD8 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		061528D12B558BA700833EA1 /* EditUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUpdateView.swift; sourceTree = "<group>"; };
 		061528D32B55961700833EA1 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		0621BC2D2B56DE80006FF7DB /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
+		0621BC2F2B57C9BC006FF7DB /* StatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatHelper.swift; sourceTree = "<group>"; };
 		065739EA2B4D7B2800E09AD8 /* db-project-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "db-project-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProjectTracker.swift; sourceTree = "<group>"; };
 		065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -76,11 +78,11 @@
 		065739EC2B4D7B2800E09AD8 /* db-project-tracker */ = {
 			isa = PBXGroup;
 			children = (
+				065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */,
+				065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */,
 				067ACAA42B51593100C29A5F /* ProjectDetail */,
 				06573A062B5013BE00E09AD8 /* ProjectList */,
 				06573A002B4D7E6E00E09AD8 /* Helpers */,
-				065739ED2B4D7B2800E09AD8 /* DBProjectTracker.swift */,
-				065739EF2B4D7B2800E09AD8 /* ProjectListView.swift */,
 				065739FB2B4D7B8600E09AD8 /* Models */,
 				065739F12B4D7B3200E09AD8 /* Assets.xcassets */,
 				065739F32B4D7B3200E09AD8 /* Preview Content */,
@@ -110,6 +112,7 @@
 			children = (
 				06573A012B4D7E8A00E09AD8 /* FontHelper.swift */,
 				061528D32B55961700833EA1 /* DateHelper.swift */,
+				0621BC2F2B57C9BC006FF7DB /* StatHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				068B82612B52B597000530EE /* ProjectUpdateView.swift in Sources */,
 				06573A0A2B50168500E09AD8 /* ProjectCardView.swift in Sources */,
 				061528D42B55961700833EA1 /* DateHelper.swift in Sources */,
+				0621BC302B57C9BC006FF7DB /* StatHelper.swift in Sources */,
 				065739FD2B4D7B9C00E09AD8 /* Project.swift in Sources */,
 				061528D22B558BA700833EA1 /* EditUpdateView.swift in Sources */,
 			);
