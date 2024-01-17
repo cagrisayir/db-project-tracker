@@ -11,7 +11,7 @@ import SwiftUI
 struct ProjectListView: View {
     @State private var newProject: Project?
     @Query private var projects: [Project]
-    @State private var showProjectDetail = false
+    @State private var selectedProject: Project?
 
     var body: some View {
         ZStack {
@@ -43,14 +43,12 @@ struct ProjectListView: View {
                         ForEach(projects) { project in
                             ProjectCardView(project: project)
                                 .onTapGesture {
-                                    showProjectDetail.toggle()
+                                    selectedProject = project
                                 }
                                 .onLongPressGesture {
                                     newProject = project
                                 }
-                                .navigationDestination(isPresented: $showProjectDetail) {
-                                    ProjectDetailView(project: project)
-                                }
+
 //                            NavigationLink {
 //                                ProjectDetailView(project: project)
 //                            } label: {
@@ -66,6 +64,9 @@ struct ProjectListView: View {
 
             }.padding()
         }
+        .navigationDestination(item: $selectedProject, destination: { p in
+            ProjectDetailView(project: p)
+        })
         .sheet(item: $newProject) { project in
             let isEdit = project.name.trimmingCharacters(in: .whitespacesAndNewlines) != ""
 
